@@ -1,0 +1,247 @@
+html,
+body {
+  min-height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  box-sizing: border-box;
+  width: 210mm;
+  padding: 20mm 10mm 15mm;
+  background-color: #fff;
+  max-width: 100%;
+  font-family: "Ubuntu", "Cantarell", "sans-serif";
+}
+
+body > div {
+  height: 100%;
+}
+
+body a {
+  color: #000;
+  text-decoration: none;
+}
+
+body table {
+  width: 100%;
+  border-spacing: 0;
+  border-collapse: collapse;
+}
+
+body td {
+  height: 0;
+  padding: 0;
+  color: #000;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 8pt;
+  line-height: 14pt;
+  vertical-align: top;
+}
+
+body .body {
+  width: 100%;
+  max-width: 130mm;
+  height: 100%;
+  margin: 0 auto;
+  border: 1px solid transparent; /*fix too large top margin for chrome 57.0.2987.133*/
+}
+
+body .footer {
+  height: 100%;
+  text-align: center;
+  vertical-align: bottom;
+}
+
+body .body td.custom-footer {
+  text-align: center;
+}
+
+body .footer div {
+  padding: 20mm 0 5pt;
+}
+
+body .paragraph {
+  margin: 5pt;
+  padding: 0;
+  color: #000;
+  font-size: 8pt;
+  line-height: 12pt;
+}
+
+body .paragraph__header {
+  display: block;
+  font-weight: 700;
+}
+
+body .paragraph__line {
+  display: block;
+}
+
+body .paragraph__line:empty {
+  display: none;
+}
+
+body .paragraph__line--uppercase {
+  text-transform: uppercase;
+}
+
+body .header__logo img {
+  display: block;
+  width: auto;
+  max-width: 70mm;
+  max-height: 30mm;
+  margin: 0 0 5mm;
+}
+
+body .header__title {
+  padding: 5px;
+  font-size: 12pt;
+  line-height: 12pt;
+  text-align: right;
+  vertical-align: bottom;
+}
+
+body .store-info,
+body .billing-info,
+body .order-info,
+body .invoice-payment-header,
+body .order-info__shipping .order-info__cell {
+  border-top: 1px solid #000;
+}
+
+body .store-info__primary,
+body .store-info__secondary,
+body .billing-info__shipping,
+body .billing-info__customer,
+body .invoice-payment-info__primary,
+body .invoice-payment-info__secondary {
+  width: 50%;
+}
+
+body .store-info__primary,
+body .store-info__secondary,
+body .billing-info__shipping,
+body .billing-info__customer {
+  padding: 3pt 0 5px;
+}
+
+body:not(.billing-info) .billing-info__shipping,
+body:not(.billing-info) .billing-info__customer {
+  padding-top: 0;
+}
+
+body .invoice-payment-header__title {
+  width: 100%;
+  padding-top: 3pt;
+}
+
+body .order-info__items .order-info__item:first-child .order-info__cell {
+  padding: 3pt 0 0;
+}
+
+body .order-info__items .order-info__item:last-child .order-info__cell {
+  padding: 0 0 3pt;
+}
+
+body .order-comments__info {
+  padding: 0 0 5pt;
+}
+
+body .order-comments__info .paragraph,
+body .order-info__item:nth-child(n + 2) .paragraph,
+body .invoice-payment-info__primary .paragraph,
+body .invoice-payment-info__secondary .paragraph {
+  margin-top: 0;
+}
+
+body .invoice-payment-header__title .paragraph {
+  margin-bottom: 0;
+}
+
+body .order-info__header .order-info__cell {
+  border-bottom: 1px solid #000;
+  font-weight: 700;
+}
+
+body .order-info__cell--main {
+  width: 70%;
+}
+
+body .order-info__cell--price,
+body .order-info__cell--qty,
+body .order-info__cell--vat,
+body .order-info__cell--subtotal {
+  text-align: right;
+  white-space: nowrap;
+}
+
+body .order-info__cell--price,
+body .order-info__cell--subtotal {
+  font-weight: 700;
+}
+
+body .order-info__cell--total {
+  padding: 5pt 5pt 0;
+}
+
+body .order-info__cell--total td {
+  padding-left: 15mm;
+  text-align: right;
+  white-space: nowrap;
+}
+
+body .order-info__cell--total tfoot td {
+  font-weight: 700;
+}
+
+body .order-info__cell--comment {
+  padding: 0 5pt 0 50mm;
+  text-align: right;
+}
+
+body .body .barcode {
+  text-align: center;
+}
+
+body .order-info__body--vat tr:first-child td {
+  padding-top: 5pt;
+}
+
+body .order-info__body--vat tr:last-child td {
+  padding-bottom: 5pt;
+}
+
+@media print {
+  * {
+    -webkit-print-color-adjust: exact;
+  }
+
+  body {
+    padding: 0;
+  }
+
+  @page {
+    margin: 20mm 0 15mm;
+  }
+}
+
+.container {
+  width: 70%;
+  max-width: 40rem;
+  border-radius: 5px;
+  margin: 2rem auto;
+  background-color: whitesmoke;
+}
+
+.card {
+  width: 80%;
+  background-color: whitesmoke;
+  border-radius: 5px;
+  padding: 10px 20px 30px;
+  margin: 2rem auto;
+}
+
+.row {
+  padding: 10px;
+}
